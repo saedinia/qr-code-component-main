@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Outfit';
+    font-display: swap;
+    font-weight: 400 700;
+    src: url('assets/fonts/Outfit-VariableFont_wght.ttf') 
+         format('truetype');
+  }
+
+  :root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-lightgray: hsl(212, 45%, 89%);
+    --color-grayishblue: hsl(220, 15%, 55%);
+    --color-dark-blue: hsl(218, 44%, 22%);
+
+    --font-family-default: 'Outfit', sans-serif;
+
+    --font-regular: 500;
+    --font-bold: 700;
+    --font-black: 800;
+  
+    --fontsize-100: 0.75rem;
+    --fontsize-200: 0.9rem;
+    --fontsize-300: 1rem;
+    --fontsize-400: 1.125rem;
+    --fontsize-500: 1.25rem;
+    --fontsize-600: 1.5rem;
+    --fontsize-700: 1.75rem;
+    --fontsize-800: 2rem;
+    --fontsize-900: 5rem;
+  }
+
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body { 
+  font-family: var(--font-family-default);
+  font-size: var(--fontsize-200);
+  color: var(--color-dark-blue);
+  background: var(--color-lightgray);
+}
+
+main {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.qr-component {
+    --padding: 1rem;
+    --border-radius: 1rem;
+    
+    background: var(--color-white);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    text-align: center;
+    max-width: 20rem;
+    padding-bottom: calc(var(--padding) * 2.5);
+}
+
+.grid-grow {
+    display: grid;
+    gap: 1rem;
+}
+
+.qr-image {
+    border-radius: calc(var(--border-radius) * 0.75);
+    overflow: hidden;
+}
+
+.qr-title {
+    padding: calc(var(--padding) * .5);
+    font-size: var(--fontsize-600);
+    font-weight: var(--font-bold);
+    color: var(--color-darkblue);
+}
+
+.qr-description {
+    padding: 0 calc(var(--padding) * 1.5);
+    color: var(--color-grayishblue);
+}
